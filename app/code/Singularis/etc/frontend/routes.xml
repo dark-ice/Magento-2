@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Bob Smith
+ * @copyright Copyright (c) 2016 Magecom
+ * @package Magecom_Singularis
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="standard">
+        <route id="magecom_singularis" frontName="magecom_singularis">
+            <module name="Magecom_Singularis" />
+        </route>
+    </router>
+</config>

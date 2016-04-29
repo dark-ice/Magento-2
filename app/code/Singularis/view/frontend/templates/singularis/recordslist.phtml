@@ -1,0 +1,24 @@
+<?php
+/**
+ * @author Bob Smith
+ * @copyright Copyright (c) 2016 Magecom
+ * @package Magecom_Singularis
+ */
+
+/** @var $this Magecom\Singularis\Block\RecordsList */
+?>
+
+<?php if ($this->_getAnotherHelper()->getEnable()): ?>
+    <?php $collection = $this->getSingularisCollection(); ?>
+    <div>
+        <?php foreach($collection as $item): ?>
+            <div><?php echo $item->getLabel(); ?></div>
+        <?php endforeach;?>
+    </div>
+<?php endif; ?>
+
+<?php
+$fullActionName = 'magecom_singularis/another/work';
+$title = __('Link to different controller and action') . ' (' . $fullActionName . ')';
+?>
+<a href="<?php echo $this->getSomeControllerUrl($fullActionName)?>"><?php echo $title;?></a>

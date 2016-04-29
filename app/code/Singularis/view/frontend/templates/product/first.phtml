@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author Bob Smith
+ * @copyright Copyright (c) 2016 Magecom
+ * @package Magecom_Singularis
+ */
+
+/** @var $this Magecom\Singularis\Block\Catalog\Product\First */
+?>
+
+<?php if ($this->_getHelper()->getEnable()): ?>
+<?php $collection = $this->getSingularisCollection(); ?>
+    <div>
+        <?php foreach ($collection as $item): ?>
+            <div><?php echo $item->getLabel(); ?></div>
+        <?php endforeach; ?>
+    </div>
+<div class="singularis-first-block" style="text-align: <?php echo $this->_getHelper()->getTextAlign(); ?>">
+<?php echo __($this->_getHelper()->getLabel()); ?>
+</div>
+<?php endif; ?>

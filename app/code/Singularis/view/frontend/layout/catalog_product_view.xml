@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Bob Smith
+ * @copyright Copyright (c) 2016 Magecom
+ * @package Magecom_Singularis
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magecom_Singularis/css/first.css"/>
+    </head>
+    <body>
+        <referenceContainer name="product.info.main">
+            <block name="magecom_singularis.first" class="Magecom\Singularis\Block\Catalog\Product\First" before="-" template="product/first.phtml" />
+        </referenceContainer>
+    </body>
+</page>

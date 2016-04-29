@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Bob Smith
+ * @copyright Copyright (c) 2016 Magecom
+ * @package Magecom_Singularis
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="magecom" translate="label" sortOrder="10">
+            <label>Magecom</label>
+        </tab>
+        <section id="magecom_singularis" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Singularis extension</label>
+            <tab>magecom</tab>
+            <resource>Magecom_Singularis::magecom_section</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>General</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Enable Singularis</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Singularis setting comment.
+                    </comment>
+                </field>
+                <field id="block_label" translate="label" type="text" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Block Label</label>
+                </field>
+                <field id="text_align" translate="label" type="select" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Text Align</label>
+                    <source_model>Magecom\Singularis\Model\Source\Align</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

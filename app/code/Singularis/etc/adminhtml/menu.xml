@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Bob Smith
+ * @copyright Copyright (c) 2016 Magecom
+ * @package Magecom_Singularis
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magecom_Singularis::magecom" title="Magecom" module="Magecom_Singularis" sortOrder="30" resource="Magecom_Singularis::magecom"/>
+        <add id="Magecom_Singularis::records_content" title="Records" module="Magecom_Singularis" sortOrder="50" parent="Magecom_Singularis::magecom" resource="Magecom_Singularis::records_content" />
+        <add id="Magecom_Singularis::records" title="All records" module="Magecom_Singularis" sortOrder="0" parent="Magecom_Singularis::records_content" action="magecom_singularis/record/index" resource="Magecom_Singularis::records"/>
+
+        <add id="Magecom_Singularis::configuration_menu" title="Configuration" module="Magecom_Singularis" sortOrder="6"
+             parent="Magecom_Singularis::records_content" action="adminhtml/system_config/edit/section/magecom_singularis" resource="Magecom_Singularis::configuration_menu"/>
+    </menu>
+</config>
