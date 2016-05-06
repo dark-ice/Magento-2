@@ -41,7 +41,7 @@ class Index extends \Magento\Framework\App\Action\Action
         $this->resultPageFactory = $resultPageFactory;
     }
     /**
-     * Validate product
+     * Customer message html
      *
      * @return \Magento\Framework\Controller\Result\Json
      */
