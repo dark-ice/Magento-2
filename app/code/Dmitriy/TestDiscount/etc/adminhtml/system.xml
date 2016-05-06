@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="customdiscount" translate="label" sortOrder="10">
+            <label>Custom Discount</label>
+        </tab>
+        <section id="dmitriy_testdiscount" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Custom Discount extension</label>
+            <tab>customdiscount</tab>
+            <resource>Dmitriy_TestDiscount::config_testdiscount</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>General</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Enable discount</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Enable custom discount.
+                    </comment>
+                </field>
+                <field id="discount_step" translate="label" type="text" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Discount step</label>
+                    <comment>
+                        Step after which charged 1 percent discount
+                    </comment>
+                </field>
+                <field id="discount_limit" translate="label" type="text" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Discount limit</label>
+                    <comment>
+                        Not more than what percentage
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

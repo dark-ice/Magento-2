@@ -1,0 +1,20 @@
+<?php $customerData = $this->getCustomerData();?>
+<?php $currentBlock = $this->_currentBlock;?>
+<?php if ($customerData['is_login']) : ?>
+<div class="discount-center">
+    <p><?php echo __('Hello') ?>, <?php echo $customerData['name'] ?></p>
+    <span><?php echo __('Your discount is : %1 %', $customerData['discount'])?></span>
+    <p><?php echo __('The number of orders is: %1 total for all: %2', $customerData['count'], $customerData['total'])?></p>
+</div>
+<?php endif; ?>
+<script type="text/javascript">
+    window.onload = function() {
+        jQuery.ajax( {
+            url: <?php echo $this->getBaseUrl(); ?>'/dmitriy_testdiscount/index',
+            data: {form_key: window.FORM_KEY},
+            type: 'POST'
+        }).done(function(a) {
+            jQuery('.discount-center').replaceWith(jQuery(a.content)[0]);
+        });
+    };
+</script>
